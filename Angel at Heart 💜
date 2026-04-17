@@ -1,106 +1,144 @@
-import { Heart, HelpingHand, Users } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel at Heart Charity</title>
 
-export default function App() {
-  return (
-    <div style={{ fontFamily: "sans-serif", minHeight: "100vh" }}>
-      {/* Hero */}
-      <section style={{ padding: "80px 16px", textAlign: "center" }}>
-        <h1 style={{ color: "#db2777", fontSize: "2.5rem", marginBottom: 16 }}>
-          Angel at Heart Charity
-        </h1>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(to bottom, #fdf2f8, #ffffff);
+      color: #374151;
+    }
 
-        <p style={{ maxWidth: 600, margin: "0 auto 24px", color: "#555" }}>
-          Spreading love, hope, and compassion to individuals and families in need.
-        </p>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 16px;
+      text-align: center;
+    }
 
-        {/* PayPal Buttons */}
-        <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
-          <a
-            href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button style={primaryButton}>One‑Time Donation</button>
-          </a>
+    h1 {
+      color: #db2777;
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
 
-          <a
-            href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button style={outlineButton}>Monthly Donation</button>
-          </a>
-        </div>
-      </section>
+    p {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      font-size: 1.1rem;
+    }
 
-      {/* Mission */}
-      <section style={{ padding: "40px 16px", maxWidth: 960, margin: "auto" }}>
-        <div style={grid}>
-          <Card
-            icon={<Heart size={32} color="#db2777" />}
-            title="Our Mission"
-            text="To serve with kindness and uplift hearts through charitable outreach."
-          />
+    .buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 64px;
+    }
 
-          <Card
-            icon={<HelpingHand size={32} color="#db2777" />}
-            title="What We Do"
-            text="Food drives, community support, care packages, and emergency assistance."
-          />
+    .btn {
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-          <Card
-            icon={<Users size={32} color="#db2777" />}
-            title="Get Involved"
-            text="Volunteer, partner, or support us to make a difference."
-          />
-        </div>
-      </section>
+    .btn-primary {
+      background-color: #db2777;
+      color: white;
+      border: none;
+    }
 
-      {/* Footer */}
-      <footer style={{ padding: 24, textAlign: "center", color: "#777" }}>
-        © {new Date().getFullYear()} Angel at Heart Charity
-      </footer>
+    .btn-outline {
+      background: transparent;
+      color: #db2777;
+      border: 2px solid #db2777;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      margin-top: 64px;
+      padding: 24px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Angel at Heart Charity</h1>
+
+    <p>
+      Spreading love, hope, and compassion to individuals and families in need.
+    </p>
+
+    <div class="buttons">
+      <a
+        class="btn btn-primary"
+        href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        One‑Time Donation
+      </a>
+
+      <a
+        class="btn btn-outline"
+        href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Monthly Donation
+      </a>
     </div>
-  );
-}
 
-function Card({ icon, title, text }) {
-  return (
-    <div style={card}>
-      {icon}
-      <h3 style={{ marginTop: 12 }}>{title}</h3>
-      <p style={{ color: "#666" }}>{text}</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To serve with kindness and uplift hearts through charitable outreach.</p>
+      </div>
+
+      <div class="card">
+        <h3>What We Do</h3>
+        <p>Food drives, community support, care packages, and emergency assistance.</p>
+      </div>
+
+      <div class="card">
+        <h3>Get Involved</h3>
+        <p>Volunteer, partner, or support us to make a difference.</p>
+      </div>
     </div>
-  );
-}
+  </div>
 
-const grid = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-  gap: 24
-};
+  <footer>
+    © <span id="year"></span> Angel at Heart Charity. All rights reserved.
+  </footer>
 
-const card = {
-  padding: 24,
-  borderRadius: 12,
-  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-  textAlign: "center"
-};
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
-const primaryButton = {
-  padding: "12px 24px",
-  borderRadius: 24,
-  border: "none",
-  background: "#db2777",
-  color: "#fff",
-  cursor: "pointer"
-};
-
-const outlineButton = {
-  padding: "12px 24px",
-  borderRadius: 24,
-  border: "2px solid #db2777",
-  background: "transparent",
-  color: "#db2777",
-  cursor: "pointer"
-};
+</body>
+</html>
