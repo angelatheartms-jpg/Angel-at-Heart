@@ -8,13 +8,14 @@
     text-align: center;
 }
 
-.card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    padding: 20px;
-    margin: 15px;
-}
+<div class="card">
+    <h2>Support Angel at Heart</h2>
+    <p>Your donation amount is your choice — every bit helps.</p>
+    <a href="https://www.paypal.com/ncp/payment/QZ7Q2MVSBJXUG" class="button" target="_blank">
+        Donate with PayPal
+    </a>
+</div>
+
 
 .button {
     background-color: #4CAF50; /* Green */
