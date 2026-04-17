@@ -142,3 +142,9 @@
 
 </body>
 </html>
+
+{
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
