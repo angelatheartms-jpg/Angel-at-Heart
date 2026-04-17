@@ -1,6 +1,4 @@
-
 "use client";
-
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,14 +18,37 @@ export default function AngelAtHeartWebsite() {
         >
           Angel at Heart Charity
         </motion.h1>
+
         <p className="text-lg max-w-2xl mx-auto mb-6 text-gray-700">
           Spreading love, hope, and compassion to individuals and families in need.
         </p>
 
-        {/* PayPal Donate Button */}
-        https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD
-      </section>
+        {/* PayPal Donate Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-pink-500 hover:bg-pink-600 text-white rounded-2xl px-6 py-3">
+              One‑Time Donation
+            </Button>
+          </a>
 
+          <a
+            href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="outline"
+              className="border-pink-500 text-pink-600 rounded-2xl px-6 py-3"
+            >
+              Monthly Donation
+            </Button>
+          </a>
+        </div>
+      </section>
 
       {/* Mission Section */}
       <section className="py-16 px-6">
@@ -71,9 +92,8 @@ export default function AngelAtHeartWebsite() {
             About Angel at Heart
           </h2>
           <p className="text-gray-700">
-            Angel at Heart is a compassionate charity focused on helping vulnerable
-            individuals feel seen, valued, and supported. Every act of kindness,
-            no matter how small, creates a ripple of hope.
+            Angel at Heart is a compassionate charity focused on helping
+            vulnerable individuals feel seen, valued, and supported.
           </p>
         </div>
       </section>
