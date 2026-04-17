@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff7f50, #ffb6c1);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    position: relative;
+    margin: 20px 0;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart:before {
+    left: 50px;
+    top: 0;
+}
+
+.heart:after {
+    left: 0;
+    top: 50px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
