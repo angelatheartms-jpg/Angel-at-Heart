@@ -1,31 +1,70 @@
-Using Node.js 20, Tailwind CSS v3.4.19, and Vite v7.2.4
-
-Tailwind CSS has been set up with the shadcn theme
-
-Setup complete: /mnt/okcomputer/output/app
-
-Components (40+):
-  accordion, alert-dialog, alert, aspect-ratio, avatar, badge, breadcrumb,
-  button-group, button, calendar, card, carousel, chart, checkbox, collapsible,
-  command, context-menu, dialog, drawer, dropdown-menu, empty, field, form,
-  hover-card, input-group, input-otp, input, item, kbd, label, menubar,
-  navigation-menu, pagination, popover, progress, radio-group, resizable,
-  scroll-area, select, separator, sheet, sidebar, skeleton, slider, sonner,
-  spinner, switch, table, tabs, textarea, toggle-group, toggle, tooltip
-
-Usage:
-  import { Button } from '@/components/ui/button'
-  import { Card, CardHeader, CardTitle } from '@/components/ui/card'
-
-Structure:
-  src/sections/        Page sections
-  src/hooks/           Custom hooks
-  src/types/           Type definitions
-  src/App.css          Styles specific to the Webapp
-  src/App.tsx          Root React component
-  src/index.css        Global styles
-  src/main.tsx         Entry point for rendering the Webapp
-  index.html           Entry point for the Webapp
-  tailwind.config.js   Configures Tailwind's theme, plugins, etc.
-  vite.config.ts       Main build and dev server settings for Vite
-  postcss.config.js    Config file for CSS post-processing tools
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel at Heart</title>
+    <style>
+        body { background-color: #f9f3f3; color: #5d3a8a; font-family: Arial, sans-serif; }
+        header { text-align: center; padding: 50px; }
+        .hero { background-color: #eAB8E4; padding: 20px; }
+        .services, .testimonial, .donation, .newsletter { padding: 20px; margin: 10px; border-radius: 10px; }
+        .impact-card { display: flex; flex-direction: column; align-items: center; margin: 20px; padding: 10px; border: 1px solid #5d3a8a; border-radius: 8px; }
+        footer { text-align: center; padding: 20px; background-color: #eAB8E4; }
+        .animation { transition: transform 0.3s ease; }
+        .animation:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Angel at Heart</h1>
+        <p>Your support changes lives!</p>
+    </header>
+    <section class="hero animation">
+        <h2>Making a Difference</h2>
+        <img src="your-image-source.jpg" alt="Angel at Heart" style="width:100%;">
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+        </ul>
+    </section>
+    <section class="testimonial">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>This organization has changed my life!</p>
+            <footer>- Happy Donor</footer>
+        </blockquote>
+    </section>
+    <section class="impact">
+        <h2>Impact Cards</h2>
+        <div class="impact-card">
+            <h3>Impact Card 1</h3>
+            <p>Description of impact card 1.</p>
+        </div>
+        <div class="impact-card">
+            <h3>Impact Card 2</h3>
+            <p>Description of impact card 2.</p>
+        </div>
+    </section>
+    <section class="donation">
+        <h2>Donate Now</h2>
+        <p>We accept donations through PayPal and Zelle.</p>
+        <button>Donate with PayPal</button>
+        <button>Donate with Zelle</button>
+    </section>
+    <section class="newsletter">
+        <h2>Sign Up for Our Newsletter</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Angel at Heart</p>
+    </footer>
+</body>
+</html>
