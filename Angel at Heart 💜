@@ -1,0 +1,70 @@
+import { Button } from "@/components/ui/button";
+import { Heart, HelpingHand, Users } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function AngelAtHeartWebsite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
+      {/* Hero Section */}
+      <section className="text-center py-20 px-6">
+        <motion.h1
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-bold text-pink-600 mb-4"
+        >
+          Angel at Heart Charity
+        </motion.h1>
+        <p className="text-lg max-w-2xl mx-auto mb-6 text-gray-700">
+          Spreading love, hope, and compassion to individuals and families in need.
+        </p>
+        <Button className="bg-pink-500 hover:bg-pink-600 text-white rounded-2xl px-6 py-3">
+          Donate Now
+        </Button>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6 text-center">
+              <Heart className="mx-auto text-pink-500 mb-4" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Our Mission</h3>
+              <p className="text-gray-600">To serve with kindness and uplift hearts through charitable outreach.</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6 text-center">
+              <HelpingHand className="mx-auto text-pink-500 mb-4" size={36} />
+              <h3 className="font-semibold text-xl mb-2">What We Do</h3>
+              <p className="text-gray-600">Food drives, community support, care packages, and emergency assistance.</p>
+            </CardContent>
+          </Card>
+          <Card className="rounded-2xl shadow-md">
+            <CardContent className="p-6 text-center">
+              <Users className="mx-auto text-pink-500 mb-4" size={36} />
+              <h3 className="font-semibold text-xl mb-2">Get Involved</h3>
+              <p className="text-gray-600">Volunteer, partner, or support us to make a difference.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="bg-pink-50 py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-pink-600 mb-4">About Angel at Heart</h2>
+          <p className="text-gray-700">
+            Angel at Heart is a compassionate charity focused on helping vulnerable
+            individuals feel seen, valued, and supported. Every act of kindness,
+            no matter how small, creates a ripple of hope.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 text-center text-gray-600">
+        <p>© {new Date().getFullYear()} Angel at Heart Charity. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
