@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Angel at Heart Charity</title>
+    <title>Angel at Heart</title>
 </head>
 <body>
     <header>
-        <h1>Welcome to Angel at Heart Charity</h1>
-        <section id="hero">
-            <h2>Making a Difference</h2>
-        </section>
+        <h1>Welcome to Angel at Heart</h1>
     </header>
-    <main>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Angel at Heart is dedicated to supporting those in need.</p>
-        </section>
-        <section id="mission">
-            <h2>Our Mission</h2>
-            <p>To bring hope and help to the underprivileged in our community.</p>
-        </section>
-        <section id="donate">
-            <h2>Support Us</h2>
-            <p>Your donations make a difference!</p>
-            <button onclick="window.location.href='donate.html'">Donate Now</button>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_donations">
-                <input type="hidden" name="business" value="your_paypal_email@example.com">
-                <input type="hidden" name="item_name" value="Donation to Angel at Heart Charity">
-                <input type="hidden" name="currency_code" value="USD">
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate with PayPal">
-            </form>
-            <button onclick="window.location.href='https://zellepay.com'">Donate via Zelle</button>
-        </section>
-    </main>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Angel at Heart, we are dedicated to making a positive impact in the community. Our team is passionate about providing support and resources to those in need.</p>
+    </section>
+    <section id="mission">
+        <h2>Our Mission</h2>
+        <p>Our mission is to bring hope and assistance to individuals and families facing challenges. We strive to empower and uplift through our various programs and initiatives.</p>
+    </section>
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <p>Our team consists of dedicated professionals and volunteers who are committed to the wellbeing of the community. Together, we work hand in hand to make a difference.</p>
+    </section>
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Angel at Heart has changed my life! I am forever grateful for their support." - A Happy Beneficiary</p>
+        <p>"A truly amazing organization! They have helped me find the resources I needed." - A Grateful Client</p>
+    </section>
     <footer>
-        <p>&copy; 2026 Angel at Heart Charity</p>
+        <h2>Support Us</h2>
+        <p>Your contributions make a difference! Support our mission by donating below:</p>
+        <form action="https://www.paypal.com/donate" method="post">
+            <input type="hidden" name="business" value="your_paypal_email@domain.com">
+            <input type="hidden" name="item_name" value="Donation to Angel at Heart">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="submit" value="Donate with PayPal">
+        </form>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
