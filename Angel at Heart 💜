@@ -1,3 +1,5 @@
+// app/AngelAtHeartClient.tsx
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -5,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, HelpingHand, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function AngelAtHeartWebsite() {
+export default function AngelAtHeartClient() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
       {/* Hero Section */}
@@ -92,7 +94,7 @@ export default function AngelAtHeartWebsite() {
             About Angel at Heart
           </h2>
           <p className="text-gray-700">
-            Angel at Heart is a compassionate charity focused on helping
+            Angel at Heart is a compassionate charity dedicated to helping
             vulnerable individuals feel seen, valued, and supported.
           </p>
         </div>
