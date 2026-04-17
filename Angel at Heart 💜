@@ -1,109 +1,106 @@
-// app/AngelAtHeartClient.tsx
-
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Heart, HelpingHand, Users } from "lucide-react";
-import { motion } from "framer-motion";
 
-export default function AngelAtHeartClient() {
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white">
-      {/* Hero Section */}
-      <section className="text-center py-20 px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-pink-600 mb-4"
-        >
+    <div style={{ fontFamily: "sans-serif", minHeight: "100vh" }}>
+      {/* Hero */}
+      <section style={{ padding: "80px 16px", textAlign: "center" }}>
+        <h1 style={{ color: "#db2777", fontSize: "2.5rem", marginBottom: 16 }}>
           Angel at Heart Charity
-        </motion.h1>
+        </h1>
 
-        <p className="text-lg max-w-2xl mx-auto mb-6 text-gray-700">
+        <p style={{ maxWidth: 600, margin: "0 auto 24px", color: "#555" }}>
           Spreading love, hope, and compassion to individuals and families in need.
         </p>
 
-        {/* PayPal Donate Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        {/* PayPal Buttons */}
+        <div style={{ display: "flex", gap: 16, justifyContent: "center" }}>
           <a
             href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
-            <Button className="bg-pink-500 hover:bg-pink-600 text-white rounded-2xl px-6 py-3">
-              One‑Time Donation
-            </Button>
+            <button style={primaryButton}>One‑Time Donation</button>
           </a>
 
           <a
             href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL&currency_code=USD"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
           >
-            <Button
-              variant="outline"
-              className="border-pink-500 text-pink-600 rounded-2xl px-6 py-3"
-            >
-              Monthly Donation
-            </Button>
+            <button style={outlineButton}>Monthly Donation</button>
           </a>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-16 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6 text-center">
-              <Heart className="mx-auto text-pink-500 mb-4" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Our Mission</h3>
-              <p className="text-gray-600">
-                To serve with kindness and uplift hearts through charitable outreach.
-              </p>
-            </CardContent>
-          </Card>
+      {/* Mission */}
+      <section style={{ padding: "40px 16px", maxWidth: 960, margin: "auto" }}>
+        <div style={grid}>
+          <Card
+            icon={<Heart size={32} color="#db2777" />}
+            title="Our Mission"
+            text="To serve with kindness and uplift hearts through charitable outreach."
+          />
 
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6 text-center">
-              <HelpingHand className="mx-auto text-pink-500 mb-4" size={36} />
-              <h3 className="font-semibold text-xl mb-2">What We Do</h3>
-              <p className="text-gray-600">
-                Food drives, community support, care packages, and emergency assistance.
-              </p>
-            </CardContent>
-          </Card>
+          <Card
+            icon={<HelpingHand size={32} color="#db2777" />}
+            title="What We Do"
+            text="Food drives, community support, care packages, and emergency assistance."
+          />
 
-          <Card className="rounded-2xl shadow-md">
-            <CardContent className="p-6 text-center">
-              <Users className="mx-auto text-pink-500 mb-4" size={36} />
-              <h3 className="font-semibold text-xl mb-2">Get Involved</h3>
-              <p className="text-gray-600">
-                Volunteer, partner, or support us to make a difference.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section className="bg-pink-50 py-16 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-pink-600 mb-4">
-            About Angel at Heart
-          </h2>
-          <p className="text-gray-700">
-            Angel at Heart is a compassionate charity dedicated to helping
-            vulnerable individuals feel seen, valued, and supported.
-          </p>
+          <Card
+            icon={<Users size={32} color="#db2777" />}
+            title="Get Involved"
+            text="Volunteer, partner, or support us to make a difference."
+          />
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="py-8 text-center text-gray-600">
-        <p>© {new Date().getFullYear()} Angel at Heart Charity. All rights reserved.</p>
+      <footer style={{ padding: 24, textAlign: "center", color: "#777" }}>
+        © {new Date().getFullYear()} Angel at Heart Charity
       </footer>
     </div>
   );
 }
+
+function Card({ icon, title, text }) {
+  return (
+    <div style={card}>
+      {icon}
+      <h3 style={{ marginTop: 12 }}>{title}</h3>
+      <p style={{ color: "#666" }}>{text}</p>
+    </div>
+  );
+}
+
+const grid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: 24
+};
+
+const card = {
+  padding: 24,
+  borderRadius: 12,
+  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+  textAlign: "center"
+};
+
+const primaryButton = {
+  padding: "12px 24px",
+  borderRadius: 24,
+  border: "none",
+  background: "#db2777",
+  color: "#fff",
+  cursor: "pointer"
+};
+
+const outlineButton = {
+  padding: "12px 24px",
+  borderRadius: 24,
+  border: "2px solid #db2777",
+  background: "transparent",
+  color: "#db2777",
+  cursor: "pointer"
+};
