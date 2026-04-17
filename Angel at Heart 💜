@@ -1,61 +1,111 @@
-.hero {
-    background-image: url('hero-background.jpg');
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-}
-<div>
-  <style>.pp-QZ7Q2MVSBJXUG{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
-  <form action="https://www.paypal.com/ncp/payment/QZ7Q2MVSBJXUG" method="post" target="_blank" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
-    <input class="pp-QZ7Q2MVSBJXUG" type="submit" value="Pay Now" />
-    <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
-    <section style="font-size: 0.75rem;"> Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
-  </form>
+<!-- Warm Background + Hero Section -->
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #ffecd2, #fcb69f); /* warm peach + soft orange */
+    }
+
+    .hero {
+        background-image: url('hero-background.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 600px;
+        text-align: center;
+    }
+
+    /* PayPal Button Styling */
+    .pp-QZ7Q2MVSBJXUG {
+        text-align:center;
+        border:none;
+        border-radius:0.25rem;
+        min-width:11.625rem;
+        padding:0 2rem;
+        height:2.625rem;
+        font-weight:bold;
+        background-color:#FFD140;
+        color:#000000;
+        font-family:"Helvetica Neue",Arial,sans-serif;
+        font-size:1rem;
+        line-height:1.25rem;
+        cursor:pointer;
+    }
+
+    /* Gallery */
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: calc(33% - 10px);
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .gallery img {
+            width: calc(50% - 10px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery img {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Donation Card with PayPal Checkout -->
+<div class="card">
+    <h2>Support Angel at Heart</h2>
+    <p>Your kindness helps us touch more lives. Every donation makes a difference.</p>
+
+    <div>
+        <form action="https://www.paypal.com/ncp/payment/QZ7Q2MVSBJXUG" 
+              method="post" 
+              target="_blank" 
+              style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+            
+            <input class="pp-QZ7Q2MVSBJXUG" type="submit" value="Pay Now" />
+            
+            <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" />
+            
+            <section style="font-size: 0.75rem;">
+                Powered by 
+                <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" 
+                     alt="paypal" 
+                     style="height:0.875rem;vertical-align:middle;"/>
+            </section>
+        </form>
+    </div>
 </div>
 
+<!-- Heartfelt Photo Gallery -->
+<div class="gallery">
+    <img src="heartfelt1.jpg" alt="Heartfelt moment 1">
+    <img src="heartfelt2.jpg" alt="Heartfelt moment 2">
+    <img src="heartfelt3.jpg" alt="Heartfelt moment 3">
+    <img src="heartfelt4.jpg" alt="Heartfelt moment 4">
+    <img src="heartfelt5.jpg" alt="Heartfelt moment 5">
+    <img src="heartfelt6.jpg" alt="Heartfelt moment 6">
+</div>
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery img {
-    width: calc(33% - 10px);
-    margin: 5px;
-    border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .gallery img {
-        width: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery img {
-        width: 100%;
-    }
-}
